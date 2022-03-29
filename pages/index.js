@@ -18,6 +18,7 @@ import {
 } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
 import { getCuratedPhotos, getQueryPhotos } from "../lib/api";
+import styles from './styles.module.css';
 
 export default function Home({ data }) {
   const [photos, setPhotos] = useState(data);
@@ -99,8 +100,9 @@ export default function Home({ data }) {
                 <a>
                   <Image
                     src={pic.src.portrait}
-                    height={400}
-                    width={300}
+                    height={300}
+                    width={200}
+
                     alt={pic.url}
                   />
                 </a>
@@ -109,7 +111,7 @@ export default function Home({ data }) {
           ))}
         </Wrap>
         <Flex my="1rem" justify="center" align="center" direction="column">
-          <a target="_blank" href="https://www.pexels.com">
+          <a target="_blank" href="https://www.pexels.com"><p className={styles.p}>Images hosted by:</p>
             <Image
               src="https://images.pexels.com/lib/api/pexels.png"
               height={50}
@@ -121,13 +123,8 @@ export default function Home({ data }) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Powered by
-            <Image
-              src="/vercel.svg"
-              width={283 / 4}
-              height={64 / 4}
-              alt="Vercel Logo"
-            />
+            <p className={styles.p}>Powered by
+            <a href="https://ryanernstnyberg.com"> Ryan Ernst Nyberg</a></p>
           </a>
         </Flex>
       </Box>

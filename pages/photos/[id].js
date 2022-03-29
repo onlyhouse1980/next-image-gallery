@@ -24,7 +24,6 @@ export default function Photos({ pic }) {
         <Text
           letterSpacing="wide"
           textDecoration="underline"
-          as="h2"
           fontWeight="semibold"
           fontSize="xl"
           as="a"
@@ -39,7 +38,7 @@ export default function Photos({ pic }) {
           <InfoIcon focusable="true" boxSize="2rem" color="red.500" />{" "}
         </Box>{" "}
         <Spacer />
-        <Link href={`/`} >
+        <Link passHref={`/`} >
         <Button
           as="a"
           borderRadius="full"
@@ -57,6 +56,7 @@ export default function Photos({ pic }) {
       <Center>
         <Box as="a" target="_blank" href={pic.url}>
           <Image
+            alt={"image requested"}
             src={pic.src.original}
             width={pic.width / 4}
             height={pic.height / 4}

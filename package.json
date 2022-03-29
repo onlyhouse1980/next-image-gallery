@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
   "author": "Ashutosh K Singh",
   "license": "MIT",
@@ -14,20 +15,10 @@
     "@emotion/react": "^11.0.0",
     "@emotion/styled": "^11.0.0",
     "bootstrap": "^5.1.3",
+    "eslint": "^8.12.0",
     "framer-motion": "^6.2.8",
     "next": "^12.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lelouchB/next-image-gallery.git"
-  },
-  "keywords": [
-    "next image gallery"
-  ],
-  "bugs": {
-    "url": "https://github.com/lelouchB/next-image-gallery/issues"
-  },
-  "homepage": "https://github.com/lelouchB/next-image-gallery#readme"
+  }
 }
