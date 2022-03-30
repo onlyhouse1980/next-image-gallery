@@ -71,7 +71,7 @@ export default function Home({ data }) {
                 onChange={(e) => setQuery(e.target.value)}
               />
 
-              <InputRightElement
+             {/*  <InputRightElement
                 children={
                   <IconButton
                     aria-label="Search"
@@ -81,7 +81,7 @@ export default function Home({ data }) {
                     onClick={handleSubmit}
                   />
                 }
-              />
+              /> */}
             </InputGroup>
           </form>
         </Container>
@@ -102,8 +102,7 @@ export default function Home({ data }) {
                     src={pic.src.portrait}
                     height={300}
                     width={200}
-
-                    alt={pic.url}
+                    alt={"pic.url"}
                   />
                 </a>
               </Link>
@@ -111,17 +110,19 @@ export default function Home({ data }) {
           ))}
         </Wrap>
         <Flex my="1rem" justify="center" align="center" direction="column">
-          <a target="_blank" href="https://www.pexels.com"><p className={styles.p}>Images hosted by:</p>
+          <a target="_blank" 
+          rel="noreferrer"
+          href="https://www.pexels.com"><p className={styles.p}>Images hosted by:</p>
             <Image
               src="https://images.pexels.com/lib/api/pexels.png"
               height={50}
               width={125}
-            />
+              alt={''} />
           </a>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noreferrer"
           >
             <p className={styles.p}>Powered by
             <a href="https://ryanernstnyberg.com"> Ryan Ernst Nyberg</a></p>
